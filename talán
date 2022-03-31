@@ -1,0 +1,21 @@
+
+void setup()
+{
+  pinMode(9, INPUT);
+  pinMode(8, OUTPUT);
+  pinMode(A0, INPUT);
+}
+bool detect;
+void loop(){
+  bool kapcsolo = digitalRead(A0);
+  bool erzek = digitalRead(0);
+  if(kapcsolo == 1){
+    if(erzek == 1){
+    tone(8, 1000,400);
+      delay(50);
+      tone(8, 500,400);
+      delay(50);
+    }
+  }
+
+}
